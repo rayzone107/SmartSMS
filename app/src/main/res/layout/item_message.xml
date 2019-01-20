@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+
+    <com.github.abdularis.civ.AvatarImageView
+        android:id="@+id/image_aiv"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/name_number_tv"
+        android:layout_alignBottom="@id/content_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        app:avatarBackgroundColor="@color/lightGray"
+        app:text="A"
+        app:textSize="24sp" />
+
+    <View
+        android:id="@+id/unread_dot"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignEnd="@id/image_aiv"
+        android:layout_alignBottom="@id/image_aiv"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/unread_dot"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/name_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/time_tv"
+        android:layout_toEndOf="@id/image_aiv"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Person Name" />
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_number_tv"
+        android:layout_marginTop="4dp"
+        android:layout_toStartOf="@id/time_tv"
+        android:layout_toEndOf="@id/image_aiv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        tools:text="Message Content" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/name_number_tv"
+        android:layout_alignBottom="@id/name_number_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:textColor="@color/lightGray"
+        android:textSize="10sp"
+        tools:ignore="SmallSp"
+        tools:text="Today" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/content_tv"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@id/image_aiv"
+        android:background="@color/dividerGray" />
+
+</RelativeLayout>
